@@ -1,0 +1,44 @@
+output-dir = cnc/
+
+front = CAMOutputs/GerberFiles/copper_top.gbr
+front-output = copper_top.cnc
+outline = CAMOutputs/GerberFiles/profile.gbr
+outline-output = profile.cnc
+drill = CAMOutputs/DrillFiles/drills_1_16.xln
+drill-output = drill.cnc
+milldrill-output = milldrill.cnc
+
+metric = 1
+metricoutput = 1
+vectorial = 1
+
+# common
+zsafe = 4
+zchange = 50
+
+# etching
+zwork = -0.3
+mill-diameters = 0.0525
+mill-speed = 12000
+mill-feed = 100
+mill-vertfeed = 800
+
+# mill drilling
+milldrill-diameter = 0.0525
+min-milldrill-hole-diameter = 0.01
+zmilldrill = -1
+
+# drilling
+drill-side = front
+zdrill = -2
+drill-speed = 12000
+drill-feed = 400
+
+# cutting
+cut-side = front
+zcut = -2
+cutter-diameter = 1.5
+cut-speed = 20000
+cut-feed = 200
+cut-vertfeed = 800
+cut-infeed = 1
